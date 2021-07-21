@@ -1,5 +1,11 @@
 # Gesture_Recognition
-Analyzing videos using neural networks, using a 3D convolutional network. 
+Analyzing videos using neural networks, using a 3D convolutional network. The dataset contains videos of 5 gestures for controlling a TV without remote control.
+Thumbs up:  Increase the volume
+Thumbs down: Decrease the volume
+Left swipe: 'Jump' backwards 10 seconds
+Right swipe: 'Jump' forward 10 seconds  
+Stop: Pause the movie 
+The training data consists of a few hundred videos categorised into one of the five classes. Each video (typically 2-3 seconds long) is divided into a sequence of 30 frames(images). These videos have been recorded by various people performing one of the five gestures in front of a webcam - similar to what the smart TV will use. 
 
 3D convolutions are a natural extension to the 2D convolutions the filter is moved in three directions (x, y and z). In this case, the input to a 3D conv is a video (which is a sequence of 30 RGB images). If we assume that the shape of each image is 100x100x3, for example, the video becomes a 4-D tensor of shape 100x100x3x30 which can be written as (100x100x30)x3 where 3 is the number of channels. Hence, deriving the analogy from 2-D convolutions where a 2-D kernel/filter (a square filter) is represented as (fxf)xc where f is filter size and c is the number of channels, a 3-D kernel/filter (a 'cubic' filter) is represented as (fxfxf)xc (here c = 3 since the input images have three channels). This cubic filter will now '3D-convolve' on each of the three channels of the (100x100x30) tensor.
 
